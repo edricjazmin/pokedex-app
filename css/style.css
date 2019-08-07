@@ -1,0 +1,19 @@
+body {
+  color: white;
+  background-color: #f52b4d;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.pokedex {
+  color: black;
+  background-color: white;
+  text-align: center;
+  padding: 6px;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin: 6px;
+  width: 33vw;
+  margin: auto;
+
+}
