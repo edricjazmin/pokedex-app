@@ -6,22 +6,42 @@ var repository = [
   },
   {
     name: 'Charmander',
-    height: 1.7,
+    height: 0.6,
     type: 'fire'
   },
   {
     name: 'Squirtle',
     height: 0.5,
     type: 'water'
+  },
+  {
+    name: 'Caterpie',
+    height: 0.3,
+    type: 'bug'
+  },
+  {
+    name: 'Weedle',
+    height: 0.3,
+    type: ['bug', 'poison']
+  },
+  {
+    name: 'Pidgey',
+    height: 0.3,
+    type: ['normal', 'flying']
+  },
+  {
+    name: 'Rattata',
+    height: 0.3,
+    type: 'normal'
   }
 ];
 
 for (var i = 0; i < repository.length; i++) {
-  if (repository[i].height > 1) {
+  if (repository[i].height > 0.6) {
     document.write(
-      repository[i].name + ' (height: ' + repository[i].height + 'm) - Wow, that\'s big! ' + '<br>')
+      '<p>' + repository[i].name + ' (height: ' + repository[i].height + 'm) - Wow, that\'s big! ' + '</p> <hr>')
   } else {
     document.write(
-      repository[i].name + ' (height: ' + repository[i].height + 'm) ' + '<br>');
+      '<p>' + repository[i].name + ' (height: ' + repository[i].height + 'm) ' + '</p> <hr>');
   }
 }
