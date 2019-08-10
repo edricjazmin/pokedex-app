@@ -36,12 +36,12 @@ var repository = [
   }
 ];
 
-for (var i = 0; i < repository.length; i++) {
-  if (repository[i].height > 0.6) {
+repository.forEach(function(currentPokemon){
+  if (currentPokemon.height > 0.6) {
     document.write(
-      '<p>' + repository[i].name + ' (height: ' + repository[i].height + 'm) - Wow, that\'s big! ' + '</p> <hr>')
+      '<p>' + currentPokemon.name + ' (height: ' + currentPokemon.height + 'm) - Wow, that\'s big! ' + '</p> <hr>')
   } else {
     document.write(
-      '<p>' + repository[i].name + ' (height: ' + repository[i].height + 'm) ' + '</p> <hr>');
-  }
-}
+      '<p>' + currentPokemon.name + ' (height: ' + currentPokemon.height + 'm) ' + '</p> <hr>');
+  };
+});
