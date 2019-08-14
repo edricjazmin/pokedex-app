@@ -19,7 +19,7 @@ var pokemonRepository = (function() {
 
   return {
     add: add,
-    getAll: getAll();
+    getAll: getAll
   };
 
 } ) ();
