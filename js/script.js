@@ -7,7 +7,7 @@ var pokemonRepository = (function() {
     {name: 'Weedle', height: 0.3, type: ['bug', 'poison']},
     {name: 'Pidgey', height: 0.3, type: ['normal', 'flying']},
     {name: 'Rattata', height: 0.3, type: 'normal'}
-  ];
+  ]; // array that acts as pokedex
 
   function add(pokemon) {
     return repository.push(pokemon);
@@ -15,21 +15,34 @@ var pokemonRepository = (function() {
 
   function getAll() {
     return repository;
+  } // end of pokemonRepository
+
+  function addListItem(pokemon) {
+    var listItem = document.createElement('li');
+    var button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('currentPokemon');
+    listItem.appendChild(button);
+    $pokemonList.appendChild(listItem);
+    button.addEventListener('click', function (event) {
+      showDetails(pokemon);
+    });
   }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }1
 
   return {
     add: add,
-    getAll: getAll
-  };
+    getAll: getAll,
+    addListItem: addListItem
+  }; // able to interact with outside IIFE
 
-} ) ();
+} ) (); //acts as IIFE
+
+var $pokemonList = document.querySelector('.pokemon-list');
 
 pokemonRepository.getAll().forEach(function(currentPokemon){
-  if (currentPokemon.height > 0.6) {
-    document.write(
-      '<p>' + currentPokemon.name + ' (height: ' + currentPokemon.height + 'm) - Wow, that\'s big! ' + '</p> <hr>')
-  } else {
-    document.write(
-      '<p>' + currentPokemon.name + ' (height: ' + currentPokemon.height + 'm) ' + '</p> <hr>');
-  };
+  pokemonRepository.addListItem(currentPokemon);
 });

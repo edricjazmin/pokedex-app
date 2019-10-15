@@ -3,22 +3,37 @@
 } */
 
 body {
-  color: white;
   background-color: #f52b4d;
   font-size: 18px;
   font-family: sans-serif;
 }
 
 .pokedex {
-  color: black;
   background-color: white;
-  padding: 0 24px;
   border: 8px solid black;
   border-radius: 12px;
-  margin: 6px;
-  width: 25vw;
+  width: 50vw;
   margin: auto;
-  height: 30vh;
+  height: 40vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin-top: 48px;
+}
+
+.currentPokemon {
+  padding: 12px 24px;
+  margin: 4px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+.currentPokemon:hover {
+  background-color: darkgray;
+  border: none;
+}
+
+.pokemon-list {
+  padding: 0;
+  list-style-type: none;
 }
