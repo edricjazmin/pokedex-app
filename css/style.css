@@ -43,7 +43,7 @@ body {
 
 .modal {
   margin: auto;
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   background: #fff;
   padding: 15px;
@@ -75,4 +75,46 @@ body {
   /* this is used to center the modal */
   display: grid;
   text-align: center;
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin: auto;
+  min-width: 200px;
+
+}
+
+.text-box {
+  display: inline;
+  float: left;
+}
+
+@media all and (max-width: 500px) {
+  .pokedex {
+    margin: auto;
+    width: 90%;
+    height: 95vh;
+  }
+  .modal {
+    max-width: 80vw;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .pokedex {
+    width: 60%;
+    height: 85vh;
+  }
+  .image {
+    margin: auto;
+  }
 }
